@@ -1,0 +1,2 @@
+#!/bin/sh
+docker run --rm -v "${PWD}:/src" returntocorp/semgrep semgrep scan --config "p/security-audit" --config "p/secrets" --config "p/default" --config "p/c" --config "p/jwt" --config "p/docker" --config "p/gitlab" --config "p/csharp" --config "p/comment" --config "p/gitleaks" --config "p/lockfiles" --config "p/xss" --config "p/dockerfile" --config "p/cwe-top-25" --config "p/owasp-top-ten" --config "p/sql-injection" --config "p/docker-compose" --config "p/security-code-scan" --config "p/semgrep-misconfigurations" --debug -o semgrepr_resul.txt --text .
